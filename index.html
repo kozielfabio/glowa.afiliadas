@@ -1,1 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GLOWA Arena · Quem vende mais, brilha mais</title>
+<meta name="theme-color" content="#1A0F14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--k:#1A0F14;--p1:#F8E4EC;--p:#E8A0B5;--pm:#D47A96;--pd:#B85C78;--cr:#FFF9F7;--ink:#2A1F24;--is:#5C4A52;--g:#C9A87C;--gl:#F4D9B5;--gold:linear-gradient(110deg,#C9A87C,#F4D9B5 45%,#C9A87C 70%,#E8A0B5);--e:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font-family:"Manrope",system-ui,sans-serif;background:var(--cr);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+section{position:relative;padding:56px 0;overflow:hidden}
+.w{max-width:1000px;margin-inline:auto;padding-inline:20px;position:relative;z-index:2}
+.eb{font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--pd)}
+.eb::before{content:"✦ ";color:var(--g)}
+.t{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(2.1rem,8.5vw,3.4rem);line-height:1.05;margin-top:10px;text-wrap:balance}
+.t em{font-style:italic;color:var(--pd)}
+.dk{background:radial-gradient(60% 40% at 10% 0%,rgba(212,122,150,.38),transparent 70%),radial-gradient(55% 40% at 100% 100%,rgba(201,168,124,.24),transparent 70%),var(--k);color:#fff}
+.dk .t em{color:var(--gl)}.dk .eb{color:var(--gl)}
+.l{font-size:16px;line-height:1.7;color:var(--is);margin-top:14px;max-width:560px}
+.dk .l{color:rgba(255,255,255,.78)}
+.c{text-align:center}.c .l{margin-inline:auto}
+.gl{font-family:"Great Vibes",cursive;font-weight:400;line-height:1;color:#fff;white-space:nowrap}
+.gl b{font-weight:400;color:var(--p);animation:gw 2.6s ease-in-out infinite alternate}
+@keyframes gw{from{text-shadow:0 0 10px rgba(232,160,181,.5)}to{text-shadow:0 0 22px rgba(242,168,188,1),0 0 46px rgba(232,160,181,.6)}}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;padding:16px 28px;border:0;border-radius:999px;cursor:pointer;background:var(--gold);background-size:200% 100%;color:#2A1420;font:800 13px "Manrope",sans-serif;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 14px 40px rgba(201,168,124,.45);transition:transform .3s var(--e),background-position .6s}
+.btn:active{transform:scale(.97)}
+.btn:hover{background-position:100% 0}
+.btn.o{background:transparent;color:#fff;border:1px solid rgba(244,217,181,.6);box-shadow:none}
+.cta{display:grid;gap:12px;margin-top:28px;max-width:420px;margin-inline:auto}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--e),transform .8s var(--e)}
+.rv.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--g);outline-offset:3px;border-radius:8px}
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:60;pointer-events:none}
 
+nav{position:sticky;top:0;z-index:50;background:rgba(26,15,20,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(244,217,181,.18);padding-top:env(safe-area-inset-top,0px)}
+nav .w{display:flex;align-items:center;justify-content:space-between;padding-block:10px}
+nav .gl{font-size:34px}
+nav a.n{padding:10px 18px;border-radius:999px;background:var(--gold);color:#2A1420;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+
+.hero{text-align:center;padding:64px 0 72px}
+.hero::before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 0deg,transparent,rgba(232,160,181,.16),transparent 30%,rgba(201,168,124,.14),transparent 60%);animation:sp 30s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.pill{display:inline-flex;gap:9px;align-items:center;padding:9px 16px;border:1px solid rgba(244,217,181,.4);border-radius:999px;background:rgba(255,255,255,.06);color:var(--gl);font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.pill i{width:8px;height:8px;border-radius:50%;background:#ff6b8a;animation:pl 1.4s infinite}
+@keyframes pl{50%{opacity:.3;transform:scale(.7)}}
+.hero .gl{font-size:clamp(5.6rem,24vw,9.5rem);margin-top:14px;display:block}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(1.9rem,7.4vw,3.2rem);line-height:1.12;margin-top:14px;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--gl)}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.st div{padding:14px 6px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(244,217,181,.25)}
+.st b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--gl);line-height:1}
+.st span{display:block;margin-top:6px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+
+.arena{background:rgba(255,255,255,.05);border:1px solid rgba(244,217,181,.3);border-radius:28px;padding:20px 14px;margin-top:28px;text-align:left}
+.ah{display:flex;justify-content:space-between;align-items:center;padding:0 6px 14px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gl)}
+.ah span:last-child{padding:4px 10px;border-radius:99px;background:rgba(255,255,255,.1);font-size:10px;letter-spacing:.08em;color:rgba(255,255,255,.7)}
+#lb{display:grid;gap:8px}
+.rw{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:13px 14px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(244,217,181,.15);animation:ri .5s var(--e) both}
+@keyframes ri{from{opacity:0;transform:translateX(-14px)}}
+.rw .p{font-family:"Cormorant Garamond",serif;font-size:1.5rem;text-align:center;color:var(--gl)}
+.rw .n{font-weight:700;font-size:14.5px}
+.rw .bar{display:block;height:7px;margin-top:7px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+.rw .bar i{display:block;height:100%;border-radius:99px;background:var(--gold);transform-origin:left;animation:gr 1s var(--e) both}
+@keyframes gr{from{transform:scaleX(0)}}
+.rw .v{font-weight:800;font-size:14px;color:var(--gl)}
+.rw.me{background:linear-gradient(90deg,rgba(232,160,181,.4),rgba(255,255,255,.08));border-color:var(--p);box-shadow:0 0 0 2px rgba(232,160,181,.35)}
+.rw.me .n::after{content:" · você";color:var(--p)}
+.duel{margin-top:18px;padding:20px 16px;border-radius:24px;background:linear-gradient(160deg,rgba(244,217,181,.16),rgba(255,255,255,.04));border:1px solid var(--gl)}
+.duel label{display:block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gl)}
+.amt{font-family:"Cormorant Garamond",serif;font-size:3.2rem;font-weight:600;line-height:1.05;margin:6px 0}
+input[type=range]{width:100%;height:44px;accent-color:#E8A0B5}
+.msg{font-size:15.5px;line-height:1.55;font-weight:700;color:#fff;min-height:48px}
+.msg b{color:var(--gl)}
+.pace{margin-top:10px;font-size:13px;line-height:1.5;color:var(--gl)}
+.cap{margin-top:14px;font-size:11.5px;color:rgba(255,255,255,.55)}
+
+.sw{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:30px -20px 0;padding:6px 20px 24px;scrollbar-width:none}
+.sw::-webkit-scrollbar{display:none}
+.pz{flex:0 0 78%;max-width:300px;scroll-snap-align:center;padding:34px 20px;border-radius:28px;text-align:center;background:#fff;border:1px solid rgba(184,92,120,.2);box-shadow:0 14px 40px rgba(184,92,120,.12)}
+.pz .m{font-size:46px}
+.pz h3{font-family:"Cormorant Garamond",serif;font-size:1.7rem;margin-top:8px}
+.pz b{display:block;margin-top:8px;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--pd)}
+.pz p{margin-top:8px;font-size:14px;line-height:1.6;color:var(--is)}
+.pz.f{background:linear-gradient(170deg,#2B1220,#1A0F14);color:#fff;border:1.5px solid var(--gl);box-shadow:0 0 0 4px rgba(201,168,124,.25),0 26px 60px rgba(184,92,120,.35)}
+.pz.f b{color:var(--gl)}.pz.f p{color:rgba(255,255,255,.78)}
+.note{margin-top:6px;padding:18px 20px;border:2px dashed var(--p);border-radius:20px;background:linear-gradient(160deg,#fff,var(--p1));font-size:14px;line-height:1.65;color:var(--is);text-align:left}
+.note b{color:var(--pd)}
+
+.mg{display:grid;gap:14px;margin-top:30px;text-align:left}
+.md{display:grid;grid-template-columns:50px 1fr;gap:6px;padding:20px 18px;border-radius:22px;background:#fff;border:1px solid rgba(184,92,120,.18);box-shadow:0 10px 30px rgba(184,92,120,.08)}
+.md b{font-family:"Cormorant Garamond",serif;font-size:2.2rem;line-height:1;color:var(--p)}
+.md strong{display:block;font-size:16px;margin-bottom:3px}
+.md span{font-size:14px;line-height:1.6;color:var(--is)}
+
+.rl{margin-top:26px;text-align:left;display:grid;gap:10px}
+details{border-radius:20px;background:rgba(255,255,255,.06);border:1px solid rgba(244,217,181,.22);overflow:hidden}
+details.hi{border-color:var(--gl);background:linear-gradient(90deg,rgba(244,217,181,.18),rgba(255,255,255,.04))}
+summary{cursor:pointer;list-style:none;padding:18px;font-weight:800;font-size:15px;display:flex;justify-content:space-between;gap:12px;min-height:56px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;font-weight:300;color:var(--gl);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 18px 18px;font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.78)}
+
+.fin .gl{font-size:clamp(3.8rem,15vw,7rem);display:block}
+.fin h2{font-family:"Cormorant Garamond",serif;font-size:clamp(1.7rem,6vw,2.6rem);margin-top:10px;font-weight:600}
+footer{background:#0F080B;color:rgba(255,255,255,.65);padding:30px 0 calc(100px + env(safe-area-inset-bottom,0px));font-size:12.5px;text-align:center}
+footer .gl{font-size:2.2rem;display:block;margin-bottom:8px}
+.sb{position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(26,15,20,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(244,217,181,.3);transform:translateY(110%);transition:transform .45s var(--e)}
+.sb.show{transform:none}
+.sb .btn{min-height:52px}
+
+@media(min-width:760px){
+ section{padding:92px 0}
+ .cta{grid-auto-flow:column;max-width:600px}
+ .pz{flex-basis:300px}.sw{justify-content:center;overflow:visible;margin-inline:0;padding-inline:0}
+ .mg{grid-template-columns:1fr 1fr}
+ .rl{grid-template-columns:1fr 1fr}
+ .sb{display:none}footer{padding-bottom:34px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<nav><div class="w"><a href="#" class="gl">Glow<b>a</b></a><a href="#arena" class="n">Arena</a></div></nav>
+
+<header class="hero dk" id="hero"><div class="w">
+  <span class="pill rv"><i></i> arena glowa · competição todo dia</span>
+  <span class="gl rv">Glow<b>a</b></span>
+  <h1 class="rv">Hoje tem afiliada que vendeu <em>R$ 1.500.</em><br>E você?</h1>
+  <p class="l rv">Aqui o ranking é diário, o topo é de quem faz acontecer e o seu nome pode virar especialista na página oficial do GLOWA Brasil. 👑</p>
+  <div class="st rv"><div><b>R$ 3.000</b><span>Selo Especialista</span></div><div><b>Todo dia</b><span>Ranking ao vivo</span></div><div><b>1º ao 3º</b><span>Prêmios</span></div></div>
+  <div class="cta rv"><a href="#arena" class="btn">Entrar na arena 💰</a><a href="#premios" class="btn o">Ver os prêmios</a></div>
+</div></header>
+
+<section class="dk" id="arena" style="padding-top:20px"><div class="w c">
+  <p class="eb rv">A arena de hoje</p>
+  <h2 class="t rv">Se compare. <em>Depois ultrapasse.</em></h2>
+  <p class="l rv">Arraste e veja onde você ficaria no ranking de hoje e quanto falta para passar a próxima.</p>
+  <div class="arena rv">
+    <div class="ah"><span>🔥 Ranking de hoje</span><span>exemplo · o time atualiza</span></div>
+    <div id="lb"></div>
+    <div class="duel">
+      <label for="sl">Quanto você vendeu hoje?</label>
+      <div class="amt" id="amt">R$ 930</div>
+      <input type="range" id="sl" min="0" max="2500" step="10" value="930">
+      <p class="msg" id="msg"></p>
+      <p class="pace" id="pace"></p>
+    </div>
+  </div>
+  <p class="cap">Dados de exemplo para simulação. Os valores reais são divulgados pela equipe no grupo VIP.</p>
+</div></section>
+
+<section id="premios"><div class="w c">
+  <p class="eb rv">Os prêmios</p>
+  <h2 class="t rv">Quem sobe, <em>ganha.</em></h2>
+  <div class="sw rv">
+    <div class="pz"><div class="m">🥈</div><h3>2º lugar</h3><b>Pix</b><p>Dinheiro direto na sua conta pelo desempenho do mês.</p></div>
+    <div class="pz f"><div class="m">🥇</div><h3>1º lugar</h3><b>Aumento de comissão</b><p>Mais ganho em cada venda e o título de Destaque do mês.</p></div>
+    <div class="pz"><div class="m">🥉</div><h3>3º lugar</h3><b>Brinde</b><p>Um mimo especial escolhido pela equipe GLOWA.</p></div>
+  </div>
+  <div class="note rv">✨ <b>A bonificação varia de mês para mês e de resultado para resultado.</b> Quanto melhor o desempenho, maior a premiação. Detalhes no grupo VIP.</div>
+</div></section>
+
+<section style="background:#FFF6F8"><div class="w c">
+  <p class="eb rv">Mentalidade GLOWA</p>
+  <h2 class="t rv">Quem brilha <em>pensa assim.</em></h2>
+  <div class="mg">
+    <div class="md rv"><b>01</b><span><strong>Ranking não espera</strong>Cada dia é uma nova largada. Quem posta primeiro, vende primeiro.</span></div>
+    <div class="md rv"><b>02</b><span><strong>Constância vence talento</strong>Quem aparece todo dia fica na cabeça da cliente e no topo da tabela.</span></div>
+    <div class="md rv"><b>03</b><span><strong>Olhe para cima</strong>Sempre existe alguém vendendo mais. Use isso como combustível.</span></div>
+    <div class="md rv"><b>04</b><span><strong>R$ 3.000 é só o começo</strong>O selo abre a porta da página oficial. O topo do ranking abre o cofre.</span></div>
+  </div>
+</div></section>
+
+<section class="dk" id="regras"><div class="w c">
+  <p class="eb rv">Para jogar limpo</p>
+  <h2 class="t rv">As regras <em>do jogo.</em></h2>
+  <div class="rl">
+    <details class="hi" open><summary>🔞 Só para maiores de 18 anos</summary><p>Menores de idade não são aceitas no programa, sem exceções.</p></details>
+    <details class="hi"><summary>👑 Selo de Especialista: R$ 3.000</summary><p>No site oficial do GLOWA Brasil, só aparece como especialista quem bater R$ 3.000 em vendas.</p></details>
+    <details><summary>✅ Só vendas confirmadas</summary><p>Contam as vendas aprovadas e fora do prazo de garantia de 30 dias.</p></details>
+    <details><summary>⚠️ Reembolso e fraude descontam</summary><p>Vendas reembolsadas ou irregulares saem do total e podem desclassificar do ranking.</p></details>
+    <details><summary>📅 Ranking mensal</summary><p>A contagem recomeça todo mês. A manutenção do selo é combinada com a equipe.</p></details>
+    <details><summary>🤍 Divulgação honesta</summary><p>Sem promessa de resultado garantido e sem spam em comentários ou DMs.</p></details>
+    <details><summary>💞 Competição com respeito</summary><p>Nada de sabotar ou copiar as colegas. Aqui uma puxa a outra para cima.</p></details>
+    <details><summary>⚖️ A equipe tem a palavra final</summary><p>Em caso de dúvida ou conflito, a equipe GLOWA decide com transparência.</p></details>
+  </div>
+</div></section>
+
+<section class="fin" style="background:#FFF6F8"><div class="w c">
+  <span class="gl rv" style="color:var(--ink)">Seu nome aqui.</span>
+  <h2 class="rv">A arena abre todo dia. O topo está esperando.</h2>
+  <div class="cta rv"><a href="#" class="btn">Falar com a equipe 💌</a></div>
+</div></section>
+
+<footer><span class="gl">Glow<b>a</b></span>© 2026 GLOWA. Todos os direitos reservados.</footer>
+<div class="sb" id="sb"><a href="#arena" class="btn">Entrar na arena 💰</a></div>
+
+<script>
+var $=function(s){return document.querySelector(s)},RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* ✏️ EDITE AQUI: ranking de hoje (o time atualiza os nomes e valores) */
+var DATA=[{n:'@afiliada.01',v:1500},{n:'@afiliada.02',v:1240},{n:'@afiliada.03',v:1010},{n:'@afiliada.04',v:760},{n:'@afiliada.05',v:420}];
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+/* barra fixa no celular */
+new IntersectionObserver(function(es){$('#sb').classList.toggle('show',!es[0].isIntersecting)}).observe($('#hero'));
+/* chuva de dinheiro e confete */
+var cv=$('#fx'),cx=cv.getContext('2d'),P=[],run=0;
+function rs(){cv.width=innerWidth;cv.height=innerHeight}rs();addEventListener('resize',rs);
+function add(x,y,n,b,a){for(var i=0;i<n;i++)P.push({x:x,y:y,vx:(Math.random()-.5)*(b?10:1),vy:a?.7+Math.random()*1.3:(Math.random()-.5)*(b?10:1)-(b?3:0),l:1,d:b?.011:.004,s:12+Math.random()*12,c:['R$','$','✦','♥','💰'][Math.random()*5|0],h:['#F4D9B5','#E8A0B5','#C9A87C','#fff'][Math.random()*4|0]})}
+function f(){cx.clearRect(0,0,cv.width,cv.height);P=P.filter(function(p){return p.l>0&&p.y<cv.height+30});P.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy+=.035;p.l-=p.d;cx.globalAlpha=Math.max(p.l,0);cx.fillStyle=p.h;cx.font='700 '+p.s+'px Manrope,serif';cx.fillText(p.c,p.x,p.y)});if(P.length)requestAnimationFrame(f);else{run=0;cx.clearRect(0,0,cv.width,cv.height)}}
+function kick(){if(P.length>150)P.splice(0,P.length-150);if(!run){run=1;requestAnimationFrame(f)}}
+if(!RM)setInterval(function(){if(document.hidden)return;add(Math.random()*innerWidth,-14,1,0,1);kick()},520);
+/* duelo do ranking */
+var sl=$('#sl'),was=-1;
+function fmt(n){return n.toLocaleString('pt-BR')}
+function upd(){
+ var v=+sl.value,rows=DATA.concat([{n:'Você',v:v,me:1}]).sort(function(a,b){return b.v-a.v||(a.me?-1:1)}),top=Math.max(rows[0].v,1),k=rows.findIndex(function(r){return r.me}),M=['🥇','🥈','🥉'];
+ $('#amt').textContent='R$ '+fmt(v);
+ $('#lb').innerHTML=rows.map(function(r,i){return '<div class="rw'+(r.me?' me':'')+'"><span class="p">'+(M[i]||i+1)+'</span><div><span class="n">'+r.n+'</span><span class="bar"><i style="width:'+Math.max(4,r.v/top*100)+'%"></i></span></div><span class="v">R$ '+fmt(r.v)+'</span></div>'}).join('');
+ var d=k?rows[k-1].v-v:0;
+ $('#msg').innerHTML=k===0?'👑 Você é a <b>#1 de hoje</b>! Agora é defender o topo.':'Você está em <b>'+(k+1)+'º</b>. Faltam <b>R$ '+fmt(d)+'</b> para passar '+rows[k-1].n+' 🔥';
+ $('#pace').textContent=v>0?'Nesse ritmo, você chega aos R$ 3.000 do selo de Especialista em '+Math.ceil(3000/v)+(Math.ceil(3000/v)>1?' dias.':' dia.'):'Bora fazer a primeira venda do dia!';
+ if(k!==was){if(was>=0&&k<was&&navigator.vibrate)navigator.vibrate(25);if(k===0&&was!==0&&!RM){add(innerWidth/2,innerHeight/2,70,1);kick()}was=k}
+}
+sl.addEventListener('input',upd);upd();
+</script>
+</body>
+</html>
